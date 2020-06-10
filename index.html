@@ -1,0 +1,134 @@
+
+<html>
+    <head>
+    <script src="JQuery.js"></script>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="main.js"></script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-W59NLLF');
+    </script>
+    <!-- End Google Tag Manager -->
+    
+    <script type="text/javascript">
+        $(function() {
+            $('.num5').append('<div class="button" value="success" id="oga" onclick="finalText()">Кнопка</div><div class="result" id="sc">Выводить текст сюда</div>');
+            $(".button").click(function(event){
+                document.getElementById("sc").innerHTML = "success"
+            })
+        })
+    </script>
+    
+    <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P5W4R8L"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+
+    <script>//скрипт первого задания
+        /*let elem = document.getElementById('temp');
+        function writeText(){
+         elem.innerHTML =`success`;
+        }*/
+        dataLayer.push({'event': 'script_1',
+        "new-elem" : "document.getElementById('temp')",
+        "elem.innerHTML" : `success`
+        });
+    </script>
+    <div class="test num1">
+        <div class="task">1. При клике на кнопку, вывести в поле result текст 'success'</div>
+        <div class="button"
+             onclick="dataLayer.push({'event': 'script_1'});">Кнопка</div>
+        <div class="result num1" id="temp">Выводить текст сюда</div>
+    </div>
+
+
+    <div class="test num2">
+    <div class="task" >2. При клике на кнопку, вывести в поле result текст из аттрибута value данной кнопки</div>
+    <div class="button" id="take" value="Тебе удалось" onclick="writeValue()">Кнопка</div>
+    <div class="result" id="place">Выводить текст сюда</div>
+    </div>
+    <script>//скрипт второго задания
+        let vl =  take.getAttribute('value');
+        let target = document.getElementById('place');
+        function writeValue(){
+            target.innerHTML = vl;
+        }
+    </script>
+    
+    <div class="test num3">
+    <div class="task" >3. При клике на кнопку, вывести в поле result цвет из каждой кнопки</div>
+    <div class="button" id="rd" value="red" onclick="writeRed()">Кнопка</div>
+    <div class="button" id="wh" value="white" onclick="writeWhite()">Кнопка</div>
+    <div class="button" id="gr" value="green" onclick="writeGreen()">Кнопка</div>
+    <div class="button" id="ye" value="yellow" onclick="writeYellow()">Кнопка</div>
+    <div class="result" id="place2">Выводить текст сюда</div>
+    </div>
+    <script>//скрипт третьего задания
+        let r =  rd.getAttribute('value');
+        let w =  wh.getAttribute('value');
+        let g =  gr.getAttribute('value');
+        let e =  ye.getAttribute('value');
+
+        let next_target = document.getElementById('place2');
+
+        function writeRed(){
+            next_target.innerHTML = r;
+        }
+        function writeWhite(){
+            next_target.innerHTML = w;
+        }
+        function writeGreen(){
+            next_target.innerHTML = g;
+        }
+        function writeYellow(){
+            next_target.innerHTML = e;
+        }
+    </script>
+
+
+    
+    <div class="test num4">
+    <div class="task" >4. При клике на кнопку, вывести в поле result цвет из каждой кнопки на русском </div>
+    <div class="button" id="rdRu" value="red" onclick="redRus()">Кнопка</div>
+    <div class="button" id="whRu" value="white"  onclick="whiteRus()">Кнопка</div>
+    <div class="button" id="grRu" value="green"  onclick="greenRus()">Кнопка</div>
+    <div class="button" id="yeRu" value="yellow"  onclick="yellowRus()">Кнопка</div>
+    <div class="result" id="place3">Выводить текст сюда</div>
+    </div>
+    <script>//скрипт четвертого задания
+        let rusRed =  rdRu.getAttribute('value');
+        let rusWhite =  whRu.getAttribute('value');
+        let rusGreen =  grRu.getAttribute('value');
+        let rusYellow =  yeRu.getAttribute('value');
+
+        let third_target = document.getElementById('place3');
+
+        function redRus(){
+            third_target.innerHTML = "красный";
+        }
+        function whiteRus(){
+            third_target.innerHTML = "белый";
+        }
+        function greenRus(){
+            third_target.innerHTML = "зеленый";
+        }
+        function yellowRus(){
+            third_target.innerHTML = "желтый";
+        }
+    </script>
+    
+    <div class="test num5">
+        <div class="task">
+            5. При клике на кнопку, вывести в поле result текст 'success'. Это не так просто как в задании 1
+        </div>
+        
+    </div>
+    </body>
+    </html>
